@@ -10,7 +10,7 @@ const Card = (article) => {
   const authorName_el = document.createElement('span');
   const authorPhoto_el = document.createElement('img');
 
-  card.classList.add('class');
+  card.classList.add('card');
   document.querySelector('.cards-container').appendChild(card)
   headline_el.classList.add('headline');
   headline_el.textContent = article.headline;
