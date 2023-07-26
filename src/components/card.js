@@ -49,9 +49,23 @@ const cardAppender = (selector) => {
 
   axios.get('http://localhost:5001/api/articles')
     .then (response => {
+      console.log(response.data)
       response.data.articles.javascript.forEach (art => {
         document.querySelector(selector).appendChild(Card(art))
       })
+      response.data.articles.bootstrap.forEach (art => {
+        document.querySelector(selector).appendChild(Card(art))
+      })
+      response.data.articles.technology.forEach (art => {
+        document.querySelector(selector).appendChild(Card(art))
+      })
+      response.data.articles.jquery.forEach (art => {
+        document.querySelector(selector).appendChild(Card(art))
+      })
+      response.data.articles.node.forEach (art => {
+        document.querySelector(selector).appendChild(Card(art))
+      })
+      
       
       
     })
