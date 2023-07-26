@@ -11,7 +11,6 @@ const Card = (article) => {
   const authorPhoto_el = document.createElement('img');
 
   card.classList.add('card');
-  document.querySelector('.cards-container').appendChild(card)
   headline_el.classList.add('headline');
   headline_el.textContent = article.headline;
   card.appendChild(headline_el);
@@ -24,7 +23,7 @@ const Card = (article) => {
   authorName_el.textContent = 'By ' + article.authorName;
   author.appendChild(authorName_el);
 
-
+  return card
 
   // TASK 5
   // ---------------------
@@ -51,9 +50,9 @@ const cardAppender = (selector) => {
   axios.get('http://localhost:5001/api/articles')
     .then (response => {
       response.data.articles.javascript.forEach (art => {
-        console.log(art.headline)
-        Card(art)
+        document.querySelector(selector).appendChild(Card(art))
       })
+      
       
     })
 
