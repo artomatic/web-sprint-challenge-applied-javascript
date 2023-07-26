@@ -17,7 +17,7 @@ const Card = (article) => {
   card.appendChild(headline_el);
   author.classList.add('author');
   card.appendChild(author);
-  imgContainer.classList.add('image-container');
+  imgContainer.classList.add('img-container');
   author.appendChild(imgContainer);
   authorPhoto_el.src = article.authorPhoto;
   imgContainer.appendChild(authorPhoto_el);
